@@ -1,0 +1,42 @@
+{
+    "prodejce": {
+        "nazev": "D-011, s.r.o.",
+        "adresa": "Ivanov",
+        "telefon": "541228481",
+        "provozni_doba": "05:00 - 23:00 hod",
+        "dic": "C226929791",
+        "ico": "26929791",
+        "adresa_provozny": "Ričanská 980/25, 641 00 Brno",
+        "ks_v_brne": "oddíl C, vložka 64261"
+    },
+    "platba": {
+        "typ": "AKCEPTOR KARET CSOB",
+        "karta": "51065*******6263",
+        "datum_platby": "25.05.2020",
+        "cislo_dokladu": "01/00000347"
+    },
+    "polozky": [
+        {
+            "kod": "010001",
+            "nazev": "NATURAL 95",
+            "mnozstvi": "36,56 L",
+            "cena_za_jednotku": "33,50",
+            "kod_nomenklatury": "27101145",
+            "spd": "12840,00 Kc/1000 L",
+            "celkem_bez_dph": "469,43",
+            "dph_sazba": "21,0%",
+            "dph": "212,60",
+            "celkem_s_dph": "1225,00"
+        }
+    ],
+    "souhrn": {
+        "celkem_bez_dph": "1012,40",
+        "dph": "212,60",
+        "celkem_s_dph": "1225,00",
+        "mena": "Kč",
+        "datum": "21.05.2025",
+        "cas": "11:42:54",
+        "obsluha": "SRBA (01)"
+    },
+    "poznamka": "DEKUJEME A PREJEME STASTNOU CESTU"
+}

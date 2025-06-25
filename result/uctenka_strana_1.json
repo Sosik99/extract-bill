@@ -1,0 +1,50 @@
+{
+    "obchod": "Kaufland Česká republika v.o.s.",
+    "adresa": "Brno, Bubeníčkova 4405/1",
+    "polozky": [
+        {
+            "nazev": "Prkenko",
+            "cena": "149,90"
+        },
+        {
+            "nazev": "Elektrický mlýnek:",
+            "cena": "149,90"
+        },
+        {
+            "nazev": "Tyčový mixér",
+            "cena": "149,90"
+        },
+        {
+            "nazev": "Elektrický ryžovač",
+            "cena": "149,90"
+        },
+        {
+            "nazev": "Kaufland Card:",
+            "cena": "-50,00"
+        },
+        {
+            "nazev": "Schůdky skládací 3stupňové",
+            "cena": "449,90"
+        },
+        {
+            "nazev": "Mezi součet",
+            "cena": "149,50"
+        }
+    ],
+    "soucet": "1 049,50",
+    "sleva_100_kc": "-100,00",
+    "vracena_karta": "0,00",
+    "dan": "0,00",
+    "brutto": "1049,50",
+    "netto": "867,36",
+    "kaufland_card": "182,14",
+    "platby_kartou": "xxxx5800",
+    "kaufland_cz": "3110",
+    "dok_platby": "61332360",
+    "zaka_mid": "53663110",
+    "online": "157136",
+    "trx": "0519",
+    "cas_transakce": "09:26",
+    "datum": "19.05.20",
+    "data": "xxxxx00000041010"
+}

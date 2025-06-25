@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Extraktor Účtenek</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body { padding-top: 2rem; }
+        .container { max-width: 800px; }
+        .upload-form { margin-bottom: 2rem; }
+        .result-card { margin-top: 1rem; }
+        .spinner-border { display: none; }
+        .rag-section { margin-top: 3rem; }
+        .rag-input-container { display: flex; }
+        .rag-input { flex: 1; }
+        .rag-button { margin-left: 0.5rem; }
+        .rag-result-container { margin-top: 1rem; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Extraktor Dat z Účtenek</h1>
+
+        <div class="upload-form card p-4">
+            <h5 class="card-title">Nahrát účtenky</h5>
+            <form id="upload-form" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="files">Vyberte jeden nebo více souborů (obrázky a PDF):</label>
+                    <input type="file" class="form-control-file" id="files" name="files[]" multiple accept=".png, .jpg, .jpeg, .pdf">
+                </div>
+                <div class="form-group">
+                    <label for="processing-method">Metoda zpracování:</label>
+                    <select class="form-control" id="processing-method" name="method">
+                        <option value="jednotlivo_metrics">Jednotlivě (s metrikami) - Pomalé, ale přesné sledování nákladů</option>
+                        <option value="jednotlivo_basic">Jednotlivě (základní) - Rychlejší, bez sledování nákladů</option>
+                        <option value="davkovo">Dávkově - Nejrychlejší, všechny soubory najednou</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Spustit extrakci</button>
+                <div class="spinner-border text-primary ml-3" role="status" id="loading-spinner">
+                    <span class="sr-only">Načítání...</span>
+                </div>
+            </form>
+        </div>
+
+        <div id="results">
+            <!-- Výsledky se zobrazí zde -->
+        </div>
+
+        <div class="result-container" id="result-container"></div>
+    </div>
+
+    <div class="rag-section">
+        <div class="container">
+            <h2>Zeptejte se na svá data (RAG)</h2>
+            
+            <!-- Volba modelu -->
+            <div class="mb-3">
+                <label for="rag-model-select" class="form-label">Vyberte AI model:</label>
+                <select id="rag-model-select" class="form-select" onchange="updateModelInfo()">
+                    <!-- Možnosti se načtou dynamicky pomocí JavaScriptu -->
+                </select>
+                <div id="model-info" class="form-text"></div>
+            </div>
+
+            <div class="rag-input-container">
+                <input type="text" id="rag-query" placeholder="Zadejte svůj dotaz..." class="rag-input" onkeyup="estimateRagCost()">
+                <button onclick="askRag()" class="rag-button">Odeslat</button>
+            </div>
+            <div id="rag-cost-estimator" class="text-muted small mt-1">
+                Odhad nákladů se zobrazí zde...
+            </div>
+            <div class="rag-result-container" id="rag-result-container">
+                <p class="rag-answer-placeholder">Odpověď se zobrazí zde...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const spinner = document.getElementById('loading-spinner');
+            const resultsDiv = document.getElementById('results');
+
+            spinner.style.display = 'inline-block';
+            resultsDiv.innerHTML = '';
+
+            fetch('/process', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                spinner.style.display = 'none';
+                if (data.error) {
+                    resultsDiv.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+                } else {
+                    let html = '<h3>Výsledky zpracování</h3>';
+                    data.results.forEach(result => {
+                        // Určíme třídu pro odznáček statusu (nerozlišuje velká/malá písmena)
+                        let badgeClass = 'danger'; // Výchozí je chyba
+                        if (result.status) {
+                            const statusLower = result.status.toLowerCase();
+                            if (statusLower.includes('úspěch') && !statusLower.includes('částečný')) {
+                                badgeClass = 'success';
+                            } else if (statusLower.includes('částečný')) {
+                                badgeClass = 'warning';
+                            }
+                        }
+                        
+                        // Bezpečný přístup k vlastnostem s výchozími hodnotami
+                        const soubor = result.soubor || 'Neznámý soubor';
+                        const status = result.status || 'Neznámý status';
+                        const tokeny = result.tokeny !== undefined ? result.tokeny : 'N/A';
+                        const naklady = result.cost !== undefined ? result.cost.toFixed(6) : 'N/A';
+                        const chyba = result.chyba || '';
+                        const json_soubor = result.json_soubor || '';
+
+                        html += `
+                            <div class="card result-card">
+                                <div class="card-header">
+                                    <strong>Soubor:</strong> ${soubor}
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"><strong>Status:</strong> <span class="badge badge-${badgeClass}">${status}</span></p>
+                                    <p class="card-text"><strong>Tokeny:</strong> ${tokeny}</p>
+                                    <p class="card-text"><strong>Náklady:</strong> $${naklady} USD</p>
+                                    ${json_soubor ? `<a href="/result/${json_soubor}" class="btn btn-info btn-sm" target="_blank">Zobrazit JSON</a>` : ''}
+                                    ${chyba ? `<p class="text-danger mt-2"><strong>Chyba:</strong> ${chyba}</p>` : ''}
+                                </div>
+                            </div>
+                        `;
+                    });
+                    resultsDiv.innerHTML = html;
+                }
+            })
+            .catch(error => {
+                spinner.style.display = 'none';
+                resultsDiv.innerHTML = `<div class="alert alert-danger">Nastala chyba: ${error}</div>`;
+            });
+        });
+
+        // --- RAG Funkce ---
+
+        // Načtení modelů při startu stránky
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/get_models')
+                .then(response => response.json())
+                .then(data => {
+                    const select = document.getElementById('rag-model-select');
+                    // Nastavíme výchozí model, který doporučujeme
+                    const recommendedModel = "gemini-1.5-flash-latest";
+
+                    for (const modelName in data) {
+                        const option = document.createElement('option');
+                        option.value = modelName;
+                        option.textContent = modelName;
+                        if (modelName === recommendedModel) {
+                            option.selected = true;
+                        }
+                        select.appendChild(option);
+                    }
+                    // Uložíme si data o modelech pro pozdější použití
+                    select.dataset.models = JSON.stringify(data);
+                    updateModelInfo(); // Zobrazíme info pro výchozí model
+                });
+        });
+
+        function updateModelInfo() {
+            const select = document.getElementById('rag-model-select');
+            const infoContainer = document.getElementById('model-info');
+            const modelsData = JSON.parse(select.dataset.models || '{}');
+            const selectedModel = select.value;
+            
+            if (modelsData[selectedModel]) {
+                infoContainer.textContent = modelsData[selectedModel].description;
+            }
+            estimateRagCost(); // Přepočítáme odhad ceny při změně modelu
+        }
+
+        function estimateRagCost() {
+            const queryInput = document.getElementById('rag-query');
+            const modelSelect = document.getElementById('rag-model-select');
+            const costContainer = document.getElementById('rag-cost-estimator');
+
+            fetch('/estimate_cost', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ 
+                    query: queryInput.value,
+                    model: modelSelect.value // Přidáme vybraný model
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    costContainer.innerHTML = `<span class="text-danger">Chyba odhadu: ${data.error}</span>`;
+                } else {
+                    let noteHtml = data.note ? `<br><small class="text-muted">${data.note}</small>` : '';
+                    costContainer.innerHTML = `Odhad tokenů dotazu: <strong>${data.input_tokens}</strong>. Odhad nákladů: <strong>$${data.cost_usd} USD</strong>${noteHtml}`;
+                }
+            });
+        }
+
+        function askRag() {
+            const queryInput = document.getElementById('rag-query');
+            const modelSelect = document.getElementById('rag-model-select');
+            const resultContainer = document.getElementById('rag-result-container');
+
+            resultContainer.innerHTML = '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Načítání...</span></div>';
+
+            fetch('/ask', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ 
+                    query: queryInput.value,
+                    model: modelSelect.value // Přidáme vybraný model
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Pro ladění vypíšeme do konzole prohlížeče, co přesně přišlo ze serveru
+                console.log("Data přijatá z /ask:", data);
+
+                if (data.error) {
+                    resultContainer.innerHTML = `<p class="error">Chyba: ${data.error}</p>`;
+                    return;
+                }
+
+                const formattedAnswer = data.answer.replace(/\n/g, '<br>');
+                let answerHtml = `<div class="rag-answer">${formattedAnswer}</div>`;
+
+                let statsHtml = '';
+                // Zpřesněná kontrola: zkontrolujeme, zda usage existuje a má vlastnost total_tokens
+                if (data.usage && typeof data.usage.total_tokens !== 'undefined') {
+                    if (data.usage.total_tokens > 0) {
+                        const usage = data.usage;
+                        const estimatedBadge = usage.estimated ? '<span class="badge bg-warning text-dark ms-2">Odhad</span>' : '';
+                        statsHtml = `<p class="text-muted small mt-2">Statistiky: <strong>${usage.total_tokens}</strong> tokenů spotřebováno (Vstup: ${usage.input_tokens}, Výstup: ${usage.output_tokens}). Cena: <strong>$${usage.cost_usd} USD</strong>${estimatedBadge}</p>`;
+                    } else {
+                         statsHtml = `
+                            <div class="mt-3">
+                                <small class="text-muted">Statistiky: 0 tokenů spotřebováno.</small>
+                            </div>
+                        `;
+                    }
+                } else {
+                    statsHtml = `
+                        <div class="mt-3">
+                            <small class="text-muted">Statistiky o použití tokenů nebyly vráceny.</small>
+                        </div>
+                    `;
+                }
+                
+                resultContainer.innerHTML = `<div class="card"><div class="card-body"><p>${answerHtml}</p>${statsHtml}</div></div>`;
+            })
+            .catch(error => {
+                console.error('Chyba při komunikaci se serverem:', error);
+                resultContainer.innerHTML = `<p class="error">Došlo k chybě při komunikaci se serverem.</p>`;
+            });
+        }
+    </script>
+</body>
+</html>

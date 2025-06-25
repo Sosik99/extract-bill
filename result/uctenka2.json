@@ -1,0 +1,66 @@
+{
+    "zahlavi": {
+        "prodejna": "CS PRIM",
+        "adresa": "Brno - Rokytova"
+    },
+    "transakce": {
+        "datum_zdanitelného_plnění": "15.05.2025",
+        "cas_zdanitelného_plnění": "07:25:39",
+        "cislo_dokladu": "15.05.2025/00074/1",
+        "typ_karty": "MASTERCARD (S)",
+        "cislo_karty": "************6263",
+        "platba": "Contactless",
+        "payfass": "PayFass",
+        "ak": "479927",
+        "exp": "**/**",
+        "teid": "M1FVT00214",
+        "mid": "53611436",
+        "trid": "358",
+        "prodej": "Frodej",
+        "pin": "PIN OK",
+        "appid": "A0000000041010",
+        "schvaleno": "Schváleno",
+        "batch": "48",
+        "celkova_castka_czk": "991.10"
+    },
+    "polozky": [
+        {
+            "kod": "000002",
+            "nazev": "Natural 95",
+            "mnozstvi": "4",
+            "cena_mj": "31.90",
+            "dph": "21%",
+            "cena_bez_dph": "31.07",
+            "celkem": "991.10"
+        }
+    ],
+    "souhrn": {
+        "suma": "991.10",
+        "dph": {
+            "dph_procent": "21",
+            "bez_dph": "819.09",
+            "dph": "172.01",
+            "celkem": "991.10"
+        },
+        "kod_nomenklatury": "27101145",
+        "mnozstvi_nomenklatury": "31.07",
+        "sazba_spotrebni_dane": "12.840",
+        "spotrebni_dan_celkem": "398.9388"
+    },
+    "dodavatel": {
+        "nazev": "Petra s.r.o.",
+        "ico": "26496178",
+        "adresa": "Podleská 1546/1a, Praha 10",
+        "dic": "CZ26496178",
+        "provoz": "21",
+        "pokladna": "1"
+    },
+    "kod_dokladu": "0E59CD70398D09BC1164E2D2F975E0DC",
+    "poznamka": "Položky označené hvězdičkou pocházejí z metrologicky ověřeného zařízení",
+    "obsluha": "Bohdana",
+    "pozdrav": "Děkujeme a přejeme Vám Prima den!",
+    "platba_bankovni_karta": {
+        "typ": "Typ-Business",
+        "poplatek": "1,98% s DPH"
+    }
+}

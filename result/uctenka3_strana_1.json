@@ -1,0 +1,35 @@
+{
+    "obchod": "D-Oil s.r.o. Ivanove te 1: 541228481",
+    "datum": "25.05.202",
+    "cas": "11:42:54",
+    "dodavatel": "D-Oil s.r.o.",
+    "ic": "22692791",
+    "dic": "CZ2692791",
+    "ico": "2692791",
+    "adresa": "Říčansská 980/25, 641 00 Brno",
+    "ks": "v Brně",
+    "platba_kartou": "Dan. dod. vložka 64261",
+    "karta": "510655",
+    "doklad": "25.05.20/02 01/00000347",
+    "typ_platby": "AKCEPTOR KARET CSÓB",
+    "polozky": [
+        {
+            "nazev": "PHL Stojan",
+            "množství": "03",
+            "cena": "36,56",
+            "celkem": "1225,00"
+        },
+        {
+            "nazev": "*01001 NATURAL 95",
+            "množství": "L x 33,50",
+            "cena": null,
+            "celkem": null
+        }
+    ],
+    "kod_nomenklatury": "27101145",
+    "dph": "212,60",
+    "celkem_ph": "1012,40",
+    "celkem": "1225,00",
+    "d_z_p": "21.05.2025 (01)",
+    "obsluha": "SRBA"
+}

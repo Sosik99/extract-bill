@@ -1,0 +1,76 @@
+{
+    "prodejna": {
+        "nazev": "Kaufland Česká republika v.o.s.",
+        "obchod": "3110 Brno-Židenice",
+        "adresa": "Brno, Bubeníčkova 4405/1"
+    },
+    "polozky": [
+        {
+            "nazev": "Prkénko",
+            "cena": "149,90"
+        },
+        {
+            "nazev": "Elektrický mlýnek; RP=2,9",
+            "cena": "149,90"
+        },
+        {
+            "nazev": "Elektrický mlýnek; RP=2,9",
+            "cena": "149,90"
+        },
+        {
+            "nazev": "Tyčový mixér; RP=2,9",
+            "cena": "299,90"
+        },
+        {
+            "nazev": "Schůdky skládací 3stupňové",
+            "cena": "449,90"
+        }
+    ],
+    "sleva": {
+        "popis": "sleva 100 Kč",
+        "castka": "100,00"
+    },
+    "mezisoucet": {
+        "castka": "1 149,50"
+    },
+    "soucet": {
+        "castka": "1 049,50"
+    },
+    "platba": {
+        "typ": "kartou",
+        "castka": "1 049,50",
+        "vratka": "0,00"
+    },
+    "dan": {
+        "sazba": "21,00%",
+        "brutto": "1049,50",
+        "netto": "867,36",
+        "castka": "182,14"
+    },
+    "kaufland_card": {
+        "cislo": "xxxxx5800",
+        "sleva": "-50,00"
+    },
+    "transakce": {
+        "doklad": "61332360",
+        "zakaznik": "53663110",
+        "platba": "DEBIT MASTERCARD CTLS",
+        "trx": "157136",
+        "rrn": "0519 157136",
+        "aid": "A0000000041010",
+        "datum": "19.05.25",
+        "cas": "09:26",
+        "castka": "1.049,50 CZK",
+        "data_emv": "0000048001/E800/420300//00/A0000000041010"
+    },
+    "ucet": {
+        "datum": "19.05.25",
+        "cas": "09:14:44",
+        "uct_cislo": "25924",
+        "obchod": "3110",
+        "kasa": "52",
+        "obsluha": "9852",
+        "uspora": "150,00 CZK"
+    },
+    "barcode": "9220376116563091318550000338"
+}

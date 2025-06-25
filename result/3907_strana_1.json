@@ -1,0 +1,33 @@
+{
+    "obchod": "Lidl Česká republika v.o.s.",
+    "adresa": "Nárožní 1359/11, 158 00, Praha 5",
+    "ic": "26178541",
+    "dic": "CZ26178541",
+    "mestsky_soud": "Praha 13, Nárožní 2824",
+    "provozovna": "Praha 13, Nárožní",
+    "polozky": [
+        {
+            "nazev": "Apetito Přír.",
+            "množství": "140g",
+            "cena": "28,90"
+        },
+        {
+            "nazev": "Toast chleba másl.",
+            "množství": "1 x 28,90",
+            "cena": "28,90"
+        },
+        {
+            "nazev": "1 x 12,90",
+            "množství": null,
+            "cena": "12,90"
+        }
+    ],
+    "suma": "41,80",
+    "zakrouhleno": "0,20",
+    "hotovost_czk": "50,00",
+    "zpet": "-8,00",
+    "dph": "3,82",
+    "cislo_dokladu": "0271 026020/04",
+    "datum_a_cas": "11.11.10 13:02",
+    "soutez": "Užijte si výhru!..."
+}

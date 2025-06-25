@@ -1,0 +1,37 @@
+{
+    "obchod": "OS PRIM Brno - Rokytkova",
+    "datum_a_cas": "15.05.2025 (07:25:39)",
+    "obchod_id": "2025/00074/1",
+    "terminal": "479Yfass",
+    "karta": "MasterCard",
+    "card": "XXXXXXXX00214",
+    "mid": "33611436",
+    "trx": "535E",
+    "pin": "PIN ok",
+    "app": "AC000041010",
+    "schvaleno": "EuroCard/MasterCard",
+    "polozky": [
+        {
+            "nazev": "Flu",
+            "množství": null,
+            "cena": null,
+            "sleva": null
+        },
+        {
+            "nazev": "[A] C0002 Natural 95",
+            "množství": "21x",
+            "cena": "31.90",
+            "celkem": "991.10"
+        }
+    ],
+    "suma": "21",
+    "bez_dph": "819.09",
+    "dph": "172.01",
+    "celkem": "991.00",
+    "kod_nomenklatury": "27101145",
+    "natural": "95",
+    "prodejna": "[A] je prodáváno jménem:",
+    "ico": "26496178",
+    "adresa": "Praha 10",
+    "dic": "CZ26496178"
+}

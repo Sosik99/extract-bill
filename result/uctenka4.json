@@ -1,0 +1,65 @@
+{
+    "prodejce": {
+        "nazev": "Kaufland Česká republika v.o.s.",
+        "obchod": "4310 Brno-Ponava",
+        "adresa": "Brno, Sportovní 594/21"
+    },
+    "polozky": [
+        {
+            "nazev": "Ubrousky 100ks bílé",
+            "cena": "24,90"
+        },
+        {
+            "nazev": "KLCkap. 10x10 ks",
+            "cena": "19,90"
+        },
+        {
+            "nazev": "Papírová tacka 100ks",
+            "cena": "94,90"
+        },
+        {
+            "nazev": "Pap kelimek 0,21",
+            "cena": "49,90"
+        }
+    ],
+    "souhrn": {
+        "celkem": "189,60",
+        "platba_kartou": "189,60",
+        "vratka": "0,00",
+        "dph": {
+            "sazba": "21,00%",
+            "castka": "32,91"
+        },
+        "brutto": "189,60",
+        "netto": "156,69"
+    },
+    "platba_karta": {
+        "typ": "DEBIT MASTERCARD CTLS",
+        "kaufland_cz": "4310",
+        "doklad_zakaznika": "53664310",
+        "tid": "61332689",
+        "trx": "336272",
+        "rrn": "0512 336272",
+        "aid": "A0000000041010",
+        "datum": "12.05.25",
+        "cas": "15:04",
+        "transakce_uspesna": true,
+        "castka": "189,60",
+        "data_emv": "0000008001/E800/1F0302//00/00000000041010",
+        "rec": "5412",
+        "autocod": "028983"
+    },
+    "pokladna": {
+        "datum": "12.05.25",
+        "cas": "14:53:58",
+        "uctenka": "98120",
+        "obchod": "4310",
+        "kasa": "62",
+        "obsluha": "9862"
+    },
+    "body": {
+        "pocet": "1"
+    },
+    "barcode": "9220308345129637154200168062",
+    "kaufland_card": "xxxxx5800"
+}

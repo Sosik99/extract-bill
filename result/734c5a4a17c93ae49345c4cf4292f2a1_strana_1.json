@@ -1,0 +1,75 @@
+{
+    "obchod": "196 00 PRAHA 9, KOSTELECKA 822 HYPERMARKET OSTRAVA-PLEŠNA",
+    "dic": "cz63473291",
+    "rejstrik_soud": "Praha, zn. A. 16077",
+    "ean_karty": "# 04500101462533",
+    "polozky": [
+        {
+            "nazev": "JC MLEKO",
+            "množství": "88 x 10.90",
+            "cena": "800"
+        },
+        {
+            "nazev": "GP MLEKO 1,5% TRV. 1L",
+            "množství": null,
+            "cena": "87.20"
+        },
+        {
+            "nazev": "JM MLEKO",
+            "množství": "5% 60X12X1L",
+            "cena": "11448.00"
+        },
+        {
+            "nazev": "OM ZLATA STORNO",
+            "množství": null,
+            "cena": "-11448.00"
+        },
+        {
+            "nazev": "JM MLEKO",
+            "množství": "5% 60X12X1L",
+            "cena": "11448.00"
+        },
+        {
+            "nazev": "OL ZLATE CLUB S 140G",
+            "množství": null,
+            "cena": "19.90"
+        },
+        {
+            "nazev": "TP APETITO SUNKA150G",
+            "množství": null,
+            "cena": "24.90"
+        },
+        {
+            "nazev": "GP APETITO",
+            "množství": "0 x 29.40",
+            "cena": "5.00"
+        },
+        {
+            "nazev": "Gulasova polevka",
+            "množství": null,
+            "cena": null
+        },
+        {
+            "nazev": "#600 MASO/UZENINY PRODEJ",
+            "množství": null,
+            "cena": "44.40"
+        },
+        {
+            "nazev": "CHLEB CESNEKACKE240G",
+            "množství": null,
+            "cena": "88.90"
+        },
+        {
+            "nazev": "MEZISOUCET",
+            "množství": null,
+            "cena": "185.00"
+        }
+    ],
+    "hotovost": "200.00",
+    "zakrouhleni": "0.00",
+    "vracena": "-15.40",
+    "zaplacena": "185.00",
+    "pocet_polozek": "13",
+    "dph_hruby_obrat": "00",
+    "cisty_dph_opat": "160.12"
+}

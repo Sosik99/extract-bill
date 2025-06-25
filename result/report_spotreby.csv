@@ -1,0 +1,55 @@
+cas,soubor,tokeny,naklady_usd,status,poznamka
+2025-06-23 20:55:29,uctenka.png,2403,0.00024030000000000004,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 20:55:33,uctenka2.png,2071,0.0002071,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 20:55:35,uctenka3.png,1720,0.000172,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 20:55:39,uctenka4.png,2120,0.000212,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 20:58:56,uctenka.png,2325,0.00023249999999999999,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 20:58:59,uctenka2.png,2104,0.00021040000000000002,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 20:59:01,uctenka3.png,1805,0.0001805,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 20:59:06,uctenka4.png,2042,0.0002042,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 21:10:07,uctenka.png,2359,0.00023590000000000001,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 21:10:11,uctenka2.png,2199,0.0002199,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 21:10:14,uctenka3.png,1949,0.00019490000000000002,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 21:10:18,uctenka4.png,2083,0.00020830000000000002,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 21:20:57,uctenka.png,4486,0.00044860000000000006,USPECH_DAVKA,Dávka 4 obrázkov - tokeny/náklady sú pre celú dávku
+2025-06-23 21:20:57,uctenka2.png,4486,0.00044860000000000006,USPECH_DAVKA,Dávka 4 obrázkov - tokeny/náklady sú pre celú dávku
+2025-06-23 21:20:57,uctenka3.png,4486,0.00044860000000000006,USPECH_DAVKA,Dávka 4 obrázkov - tokeny/náklady sú pre celú dávku
+2025-06-23 21:20:57,uctenka4.png,4486,0.00044860000000000006,USPECH_DAVKA,Dávka 4 obrázkov - tokeny/náklady sú pre celú dávku
+2025-06-23 21:21:51,uctenka.png,1569,0.00015690000000000002,USPECH_DAVKA,Dávka 1 obrázkov - tokeny/náklady sú pre celú dávku
+2025-06-23 21:28:22,uctenka.png,2139,0.0002139,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 21:28:26,uctenka2.png,2162,0.0002162,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 21:28:28,uctenka3.png,1804,0.00018040000000000002,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-23 21:28:32,uctenka4.png,2139,0.0002139,USPECH_JEDNOTLIVO,Spracované jednotlivo - presné údaje
+2025-06-24 22:12:03,uctenka.png,4312,0.0004312,USPECH_DAVKA,Dávka 4 obrázkov - tokeny/náklady sú pre celú dávku
+2025-06-24 22:12:03,uctenka2.png,4312,0.0004312,USPECH_DAVKA,Dávka 4 obrázkov - tokeny/náklady sú pre celú dávku
+2025-06-24 22:12:03,uctenka3.png,4312,0.0004312,USPECH_DAVKA,Dávka 4 obrázkov - tokeny/náklady sú pre celú dávku
+2025-06-24 22:12:03,uctenka4.png,4312,0.0004312,USPECH_DAVKA,Dávka 4 obrázkov - tokeny/náklady sú pre celú dávku
+2025-06-25 18:47:08,uctenka.png,3749,0.0026243,chyra,JSONDecodeError
+2025-06-25 18:47:08,uctenka2.png,3749,0.0026243,chyra,JSONDecodeError
+2025-06-25 18:47:08,uctenka3.png,3749,0.0026243,chyra,JSONDecodeError
+2025-06-25 18:47:08,uctenka4.png,3749,0.0026243,chyra,JSONDecodeError
+2025-06-25 18:48:18,uctenka.png,1510,0.001057,USPECH_JEDNOTLIVO,Zpracováno jednotlivě - přesné údaje
+2025-06-25 18:48:24,uctenka2.png,1331,0.0009316999999999999,USPECH_JEDNOTLIVO,Zpracováno jednotlivě - přesné údaje
+2025-06-25 18:48:29,uctenka3.png,1236,0.0008651999999999999,USPECH_JEDNOTLIVO,Zpracováno jednotlivě - přesné údaje
+2025-06-25 18:48:36,uctenka4.png,1403,0.0009820999999999999,USPECH_JEDNOTLIVO,Zpracováno jednotlivě - přesné údaje
+2025-06-25 18:53:39,uctenka.png,3905,0.0027335,chyra,JSONDecodeError
+2025-06-25 18:53:39,uctenka2.png,3905,0.0027335,chyra,JSONDecodeError
+2025-06-25 18:53:39,uctenka3.png,3905,0.0027335,chyra,JSONDecodeError
+2025-06-25 18:53:39,uctenka4.png,3905,0.0027335,chyra,JSONDecodeError
+2025-06-25 19:33:39,3907.jpg,946,0.000496,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:33:39,734c5a4a17c93ae49345c4cf4292f2a1.jpg,946,0.000496,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:33:39,uctenka.png,946,0.000496,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:33:39,uctenka2.png,946,0.000496,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:33:39,uctenka3.png,946,0.000496,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:33:39,uctenka4.png,946,0.000496,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:33:39,Účtenka_Lidl.jpg,946,0.000496,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:34:18,uctenka2.png,1423,0.0007470749999999998,USPECH_JEDNOTLIVO,Zpracováno jednotlivě - přesné údaje
+2025-06-25 19:39:00,3907.jpg,841,0.000441,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:39:00,734c5a4a17c93ae49345c4cf4292f2a1.jpg,841,0.000441,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:39:00,uctenka.png,841,0.000441,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:39:00,uctenka2.png,841,0.000441,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:39:00,uctenka3.png,841,0.000441,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:39:00,uctenka4.png,841,0.000441,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:39:00,Účtenka_Lidl.jpg,841,0.000441,úspěch,"Zpracováno z dávky, strana 1"
+2025-06-25 19:39:18,uctenka2.png,1459,0.0007659749999999999,USPECH_JEDNOTLIVO,Zpracováno jednotlivě - přesné údaje
+2025-06-25 19:49:35,734c5a4a17c93ae49345c4cf4292f2a1.jpg,1389,0.0007292249999999999,USPECH_JEDNOTLIVO,Zpracováno jednotlivě - přesné údaje

@@ -1,0 +1,24 @@
+# 📦 Seznam Python knihoven (requirements.txt)
+#
+# Tento soubor obsahuje seznam všech Python knihoven, které jsou potřeba pro spuštění projektu.
+# Knihovny můžete nainstalovat všechny najednou pomocí jediného příkazu v terminálu:
+#
+# pip install -r requirements.txt
+#
+
+# --- 🌐 Webová aplikace ---
+Flask                 # Mikrorámec pro vytvoření webového rozhraní (GUI).
+
+# --- 🧠 Jádro pro práci s AI (Google Gemini & LangChain) ---
+google-generativeai   # Oficiální knihovna od Googlu pro přímou práci s modely Gemini.
+langchain             # Jádro frameworku LangChain pro stavbu AI aplikací (RAG, agenty atd.).
+langchain-community   # Komunitní rozšíření (obsahuje např. FAISS loader a další utility).
+langchain-google-genai # Specifická integrace LangChain pro modely Google Gemini.
+
+# --- 💾 Vektorová databáze a utility ---
+faiss-cpu             # Knihovna pro efektivní vyhledávání podobnosti v textech (vektorová databáze).
+                      # Verze "-cpu" je univerzální a nevyžaduje speciální hardware (GPU).
+jq                    # Nástroj pro pokročilé zpracování a filtrování JSON dat, vyžaduje ho JSONLoader v LangChain.
+
+# --- 📄 Zpracování souborů ---
+PyMuPDF               # Knihovna pro extrakci dat z PDF souborů (převod stránek na obrázky).

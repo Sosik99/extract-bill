@@ -1,0 +1,33 @@
+{
+    "obchod": "Kaufland Česká republika v.o.s.",
+    "adresa": "Brno, Sportovní 594/21",
+    "polozky": [
+        {
+            "nazev": "Utěrky 100ks bílé",
+            "cena": "24,90"
+        },
+        {
+            "nazev": "KLČKAP. 10x10 ks",
+            "cena": "94,90"
+        },
+        {
+            "nazev": "Pap. kelímek 0,2l",
+            "cena": "49,90"
+        }
+    ],
+    "soucet": "189,60",
+    "platba_kartou": "0,00",
+    "dan": "0,00",
+    "brutto": "189,60",
+    "netto": "156,69",
+    "kaufland_card": "32,91",
+    "platby_kartou": "xxxx5800",
+    "kaufland_cz": "4310",
+    "dok_platby": "61332689",
+    "zaka_mid": "53664310",
+    "online": "336272",
+    "trx": "0519",
+    "cas_transakce": "15:04",
+    "datum": "12.05.20",
+    "data": "xxxxx00000041010"
+}

@@ -1,0 +1,69 @@
+{
+    "prodejna": {
+        "nazev": "HYPERMARKET OSTRAVA-PLESNÁ",
+        "adresa": "196 00 PRAHA 9, KOSTELECKÁ 822",
+        "dic": "CZ63473291",
+        "rejstrikovy_soud": "Praha, zn. A. 16077",
+        "cislo_pokladny": "28",
+        "cislo_transakce": "404"
+    },
+    "ean_karty": "0450101462533",
+    "polozky": [
+        {
+            "nazev": "JM MLÉKO 1,5% TRV.11",
+            "pocet": 8,
+            "cena_za_jednotku": 10.9,
+            "celkova_cena": 87.2
+        },
+        {
+            "nazev": "GB JČ MLÉKO",
+            "cena": 8.0
+        },
+        {
+            "nazev": "JM MLÉK01,5%60X12X1L.",
+            "cena": 11448.0,
+            "storno": true
+        },
+        {
+            "nazev": "JM MLÉK01,5%60X12X1L",
+            "cena": 11448.0
+        },
+        {
+            "nazev": "OL ZLATÉ CLUB S 140G",
+            "cena": 19.9
+        },
+        {
+            "nazev": "TP APETITO ŠUNKA150G",
+            "cena": 24.9
+        },
+        {
+            "nazev": "GB APETITO",
+            "cena": 5.0
+        },
+        {
+            "nazev": "Gulasova polevka",
+            "cena": 0.1
+        },
+        {
+            "nazev": "#600 MASO/UZENINY PRODEJ",
+            "cena": 44.4
+        },
+        {
+            "nazev": "CHLÉB ČESNEKÁČEK240G",
+            "cena": 8.9
+        }
+    ],
+    "mezisoucet": 185.4,
+    "hotovost": 200.0,
+    "zaokrouhleni": 678,
+    "vracena_castka": 0.4,
+    "zaplacena_castka": 15.0,
+    "celkem_k_zaplaceni": 185.0,
+    "pocet_polozek": 13,
+    "dph": {
+        "hruby_obrat": 0.0,
+        "sazba": "15%",
+        "castka": 24.12,
+        "cisty_obrat": 160.88
+    }
+}
